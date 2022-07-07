@@ -9,6 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #F5F5F5;
+  transition: .4s;
 }
 
 code {
@@ -18,4 +19,9 @@ code {
 
 * {
   font-family: 'Montserrat Alternates', sans-serif;
+  transition: .4s;
+}
+
+.dark {
+  background-color: #000;
 }

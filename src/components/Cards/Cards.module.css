@@ -65,6 +65,7 @@
 
 }
 
+
 .cardsBottom {
     display: flex;
     align-items: center;
@@ -75,7 +76,9 @@
     display: flex;
     align-items: flex-start;
     column-gap: 5px;
+    cursor: pointer;
 }
+
 
 .learnMore {
     font-style: normal;
@@ -84,6 +87,10 @@
     line-height: 17px;
     letter-spacing: 0.439286px;
     color: #717CFF;
+    transition: .3s;
+}
+.learnMore:hover {
+    letter-spacing: 2px;
 }
 
 .clockBlock {
@@ -100,4 +107,48 @@
     text-align: right;
     letter-spacing: 0.444444px;
     color: #373737;
+}
+
+.dark {
+    background-color: #000;
+    border: 1px solid #fff;
+}
+.darktext {
+    color: #D5E4EC;
+}
+.invers {
+    background-color: #000;
+    border: 1px solid;
+}
+
+@media screen and (max-width: 1310px) {
+    .cards {
+        width: 80vw;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .cardsСalendar {
+        width: 125px;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .cardsСalendar {
+        width: 125px;
+    }
+    .cardsBottom {
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    .cardsTop {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+    }
+    .cardstitle {
+        text-align: left;
+    }
 }

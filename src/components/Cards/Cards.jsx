@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { Children } from 'react';
 import styles from './Cards.module.css';
 import arrow from '../../assets/images/arrow.svg';
 import clock from '../../assets/images/time.svg';
+import classNames from 'classnames';
 
-function Cards() {
+function Cards({ show, title, desc, number, month }) {
     return (
-        <div className={styles.cards}>
+        <div className={classNames(styles.cards, {
+            [styles.dark] : show
+        })}>
             <div className={styles.cardsTop}>
-                <div className={styles.cardsСalendar}>
-                    <span className={styles.number}>23</span>
-                    <span className={styles.month}>Des</span>
+                <div className={classNames(styles.cardsСalendar, {
+                    [styles.invers] : show
+                })}>
+                    <span className={styles.number}>{number}</span>
+                    <span className={styles.month}>{month}</span>
                 </div>
-                <div className={styles.cardstitle}>Macquarie University, Sydney, Australia</div>
+                <div className={classNames(styles.cardstitle, {
+                    [styles.darktext] : show
+                })}>{title}</div>
             </div>
-            <div className={styles.desc}>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</div>
+            <div className={classNames(styles.desc, {
+                [styles.darktext] : show
+            })}>{desc}</div>
             <div className={styles.cardsBottom}>
                 <div className={styles.learnMoreblock}>
                     <div className={styles.learnMore}>Learn More</div>
@@ -21,7 +30,9 @@ function Cards() {
                 </div>
                 <div className={styles.clockBlock}>
                     <img src={clock} alt="часы" />
-                    <div className={styles.time}>10:00 AM - 2:00 PM</div>
+                    <div className={classNames(styles.time, {
+                        [styles.darktext] : show
+                    })}>10:00 AM - 2:00 PM</div>
                 </div>
             </div>
         </div>
