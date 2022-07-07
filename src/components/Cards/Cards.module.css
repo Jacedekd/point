@@ -5,6 +5,9 @@
     border-radius: 15px;
     padding: 30px;
 }
+.cards:hover {
+    transform: scale(102%);
+}
 
 .cardsTop {
     display: flex;
