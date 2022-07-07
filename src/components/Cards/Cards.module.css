@@ -154,4 +154,7 @@
     .cardstitle {
         text-align: left;
     }
+    .cards {
+        padding: 20px;
+    }
 }
